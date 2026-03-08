@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INITIALIZE DEPLOYMENT | PROJECT ALPHA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #09090f;
+            --surface: #111118;
+            --border: #1f1f2e;
+            --gold: #f5c842;
+            --gold-glow: rgba(245, 200, 66, 0.15);
+            --text: #ededf5;
+            --muted: #5a5a7a;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Ambient Glow Background */
+        body::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--gold-glow) 0%, transparent 70%);
+            z-index: 0;
+            top: -100px;
+            right: -100px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+            padding: 40px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.8);
+            position: relative;
+            z-index: 10;
+            text-align: center;
+        }
+
+        .eyebrow {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--gold);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: inline-block;
+            border-bottom: 1px solid var(--gold);
+            padding-bottom: 5px;
+        }
+
+        h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(3.5rem, 12vw, 4.5rem);
+            line-height: 0.9;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .highlight { color: var(--gold); }
+
+        p {
+            font-size: 1rem;
+            color: var(--muted);
+            margin-bottom: 35px;
+            line-height: 1.6;
+        }
+
+        /* LEADSLEAP EMBED STYLING */
+        .form-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            padding: 18px;
+            background: #050508;
+            border: 1px solid var(--border);
+            color: #fff;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        input[type="email"]:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 15px var(--gold-glow);
+        }
+
+        .btn-strike {
+            width: 100%;
+            padding: 20px;
+            background: var(--gold);
+            color: #000;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 900;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            letter-spacing: 1px;
+            transition: transform 0.2s, filter 0.2s;
+        }
+
+        .btn-strike:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+        }
+
+        .footer-tag {
+            margin-top: 30px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.6rem;
+            color: #333344;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 30px 20px; border: none; background: transparent; box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="eyebrow">Level 1 Authentication</div>
+        <h1>PROJECT <span class="highlight">ALPHA</span></h1>
+        <p>Initialize your 14-Day Traffic Blitz. Access the 180k Search Intent Roadmap and claim your $1 Invisible Factory.</p>
+
+        <div class="form-stack">
+            <form action="https://www.leadsleap.com/code/optin.php" method="post">
+                <input type="hidden" name="list_id" value="YOUR_LIST_ID_HERE">
+                
+                <input type="email" name="email" placeholder="Sovereign Email Address..." required>
+                
+                <button type="submit" class="btn-strike">Initialize Deployment →</button>
+            </form>
+        </div>
+
+        <div class="footer-tag">
+            Encrypted Connection // RepFam Sovereign Factory
+        </div>
+    </div>
+
+</body>
+</html>
