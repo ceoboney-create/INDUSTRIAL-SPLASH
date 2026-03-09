@@ -5,37 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SYSTEM ACCESS | PROJECT ALPHA</title>
     <style>
-        :root { --gold: #f5c842; --dark: #050505; --gray: #1a1a1a; --red: #ff4444; }
-        body { background: var(--dark); color: #e0e0e0; font-family: 'Courier New', Courier, monospace; margin: 0; display: flex; align-items: center; justify-content: center; min-height: 100vh; overflow-x: hidden; }
-        .terminal { width: 90%; max-width: 650px; border: 1px solid var(--gray); background: #000; box-shadow: 0 0 25px rgba(245, 200, 66, 0.15); padding: 30px; position: relative; }
-        .status-bar { color: var(--gold); font-weight: bold; margin-bottom: 20px; font-size: 0.8rem; letter-spacing: 2px; border-bottom: 1px solid var(--gray); padding-bottom: 10px; }
-        h1 { color: #fff; font-size: 1.8rem; margin: 0 0 15px 0; text-transform: uppercase; line-height: 1.2; }
-        .warning { color: var(--red); font-weight: bold; margin-bottom: 20px; text-transform: uppercase; }
-        p { line-height: 1.6; font-size: 1rem; margin-bottom: 25px; color: #bbb; }
-        .cta-box { border: 1px dashed var(--gold); padding: 30px 20px; text-align: center; background: rgba(245, 200, 66, 0.03); margin-top: 10px; }
-        .btn { display: inline-block; background: var(--gold); color: #000; padding: 22px 40px; text-decoration: none; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); width: 85%; font-size: 1.3rem; border-radius: 2px; }
-        .btn:hover { background: #fff; transform: scale(1.02); box-shadow: 0 0 20px var(--gold); }
-        .footer { margin-top: 35px; font-size: 0.7rem; color: #333; text-align: center; text-transform: uppercase; letter-spacing: 1px; }
-        .blink { animation: blinker 1s linear infinite; }
-        @keyframes blinker { 50% { opacity: 0; } }
+        :root {
+            --neon-green: #39ff14;
+            --glass-red: rgba(255, 0, 0, 0.15);
+            --border-red: rgba(255, 50, 50, 0.3);
+            --dark-bg: #0a0a0a;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #e0e0e0;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            background-image: radial-gradient(circle, #1a1a1a 1px, transparent 1px);
+            background-size: 25px 25px;
+        }
+
+        .terminal-container {
+            background: var(--glass-red);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-red);
+            padding: 3rem;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 0 40px rgba(255, 0, 0, 0.1);
+            border-radius: 2px;
+            position: relative;
+        }
+
+        .status-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            font-size: 0.7rem;
+            padding: 5px;
+            color: var(--border-red);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 1px solid var(--border-red);
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .highlight {
+            color: var(--neon-green);
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 1.1rem;
+            color: #b0b0b0;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: transparent;
+            color: var(--neon-green);
+            border: 2px solid var(--neon-green);
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(57, 255, 20, 0.2);
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background: var(--neon-green);
+            color: #000;
+            box-shadow: 0 0 30px rgba(57, 255, 20, 0.6);
+            transform: scale(1.05);
+        }
+
+        .footer-id {
+            margin-top: 2rem;
+            font-size: 0.7rem;
+            color: #444;
+            letter-spacing: 1px;
+        }
     </style>
 </head>
 <body>
-    <div class="terminal">
-        <div class="status-bar">[ SYSTEM: ONLINE ] [ PROTOCOL: ZERO-HOLE ]</div>
-        <h1>DECOMMISSION THE GURU STACK.</h1>
-        <div class="warning">THE 14-DAY TRAFFIC BLITZ IS INITIALIZED.</div>
-        <p>
-            You are staring at the blueprint of an <b>Invisible Factory</b>. 
-            We don't pay rent for expensive software. We deploy sovereign assets for $0/mo. 
-            Stop being a consumer. Start being a distributor.
-        </p>
-        <div class="cta-box">
-            <a href="https://llclick.com/r/p9zgg9r5/" class="btn">I WANT THIS <span class="blink">_</span></a>
-        </div>
-        <div class="footer">
-            TrackID: p9zgg9r5 // SECURE DEPLOYMENT // REP FAM
-        </div>
+
+<div class="terminal-container">
+    <div class="status-bar">[ SYSTEM: ONLINE ] [ DEPLOYMENT: 14-DAY BLITZ ]</div>
+    
+    <h1>STOP THE <span class="highlight">BLEED.</span></h1>
+    
+    <p>
+        The "Guru Stack" is designed to keep you broke. <br>
+        Stop paying rent for infrastructure you don't own. 
+    </p>
+
+    <p style="font-size: 0.9rem; border-left: 2px solid var(--neon-green); padding-left: 15px; text-align: left;">
+        We are declassifying the <strong>14-Day Traffic Blitz</strong>. 
+        Learn to deploy sovereign assets that generate leads for $0/mo. 
+    </p>
+
+    <a href="https://llclick.com/r/p9zgg9r5/" class="cta-button">I WANT THIS _</a>
+
+    <div class="footer-id">
+        TrackID: p9zgg9r5 // SECURE ENTRY // REP FAM
     </div>
+</div>
+
 </body>
 </html>
